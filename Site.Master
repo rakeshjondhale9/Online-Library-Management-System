@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Online_Library_Management_System.SiteMaster" %>
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+nav {
+    margin: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 20px;
+    background-color: white;
+    min-height: 400px; /* Adjust as needed */
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online Library Management System</title>
+    <link rel="stylesheet" type="text/css" href="Styles/Site.css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>Online Library Management</h1>
+            <nav>
+                <ul>
+                     <li><a href="Dashboard.aspx">Dashboard</a></li>
+                    <li><a href="ManageBooks.aspx">Manage Books</a></li>
+                   
+                    <li><a href="IssueBooks.aspx">Issue Books</a></li>
+                    <li><a href="ReturnBooks.aspx">Return Books</a></li>
+                     <li><a href="ReportBooks.aspx">Report</a></li>
+                    <li><a href="Login.aspx">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Online Library Management System. All rights reserved.</p>
+        </div>
+    </form>
+</body>
+</html>
